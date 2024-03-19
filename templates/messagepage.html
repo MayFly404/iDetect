@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/home">iDetect</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/register">Register</a>
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+                <!-- Add buttons to view and add businesses -->
+                <a class="nav-link" href="/view-all-businesses">View Businesses</a>
+                <a class="nav-link" href="/add-business">Add Business</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<section class="css-selector">
+    <h1 class="title-h1-center">More Information</h1>
+    <div class='air air1'></div>
+    <div class='air air2'></div>
+    <div class='air air3'></div>
+    <div class='air air4'></div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4" style="background: white">
+            <h1>Our Purpose</h1>
+            <p>Enhance user safety through an alert system using an ultrasonic motion detector.
+                Provide users with a reliable and efficient means of detecting motion in their surroundings.
+                Utilize ultrasonic motion sensor technology to effectively detect movement.
+                Promptly notify users when motion is detected.
+                Improve user's safety and provide peace of mind in various environments, including homes, offices, and other relevant settings.</p>
+            <p> </p>
+        </div>
+
+        <div class="col-sm-4" style="background: white">
+            <h1>How it works </h1>
+            <p>We are using a ultrasonic motion sensor that is connected to a raspberry pi in order to see motion detected.</p>
+            <p> </p>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>

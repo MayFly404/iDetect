@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BusinessHub - File View</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/home">BusinessHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/register">Register</a>
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                    <a class="nav-link" href="/view-business">View Business</a>
+                    <a class="nav-link" href="/add-business">Add Business</a>
+                    <a class="nav-link" href="/contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <h1>File View</h1>
+
+    {% if file.user_id == current_user.id %}
+        <h3>File: {{ file.filename }}</h3>
+        <p>Uploaded by: {{ file.user.username }}</p>
+
+        <!-- Display the file content -->
+        <pre>{{ file.data.decode('utf-8') }}</pre>
+    {% else %}
+        <p>File not found or unauthorized access</p>
+    {% endif %}
+
+    <a href="{{ url_for('upload_file') }}">Upload a new file</a>
+</body>
+</html>
+
